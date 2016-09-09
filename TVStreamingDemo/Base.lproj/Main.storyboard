@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WPU-4S-eTA">
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Demo Detail View Controller-->
+        <scene sceneID="fhm-ok-1ER">
+            <objects>
+                <viewController id="t4N-bc-rnM" customClass="DemoDetailViewController" customModule="TVStreamingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XJ6-a4-rUY"/>
+                        <viewControllerLayoutGuide type="bottom" id="c1z-ur-pP3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bgj-9F-PYA">
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmz-qy-GQ7">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="120"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1Q-u4-no7">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR9-qz-Pu2">
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="handlePlayButtonTapped:" destination="t4N-bc-rnM" eventType="primaryActionTriggered" id="ofN-tE-Aw6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="k1Q-u4-no7" secondAttribute="trailing" id="6zg-Gz-5mn"/>
+                            <constraint firstItem="gR9-qz-Pu2" firstAttribute="top" secondItem="k1Q-u4-no7" secondAttribute="bottom" constant="44" id="FHb-aw-AI8"/>
+                            <constraint firstItem="k1Q-u4-no7" firstAttribute="top" secondItem="pmz-qy-GQ7" secondAttribute="bottom" constant="19" id="WMs-BJ-Fqc"/>
+                            <constraint firstItem="pmz-qy-GQ7" firstAttribute="centerX" secondItem="bgj-9F-PYA" secondAttribute="centerX" id="igi-1Q-m6f"/>
+                            <constraint firstItem="k1Q-u4-no7" firstAttribute="leading" secondItem="bgj-9F-PYA" secondAttribute="leading" id="lPV-0s-f60"/>
+                            <constraint firstItem="gR9-qz-Pu2" firstAttribute="centerX" secondItem="bgj-9F-PYA" secondAttribute="centerX" id="nnq-q5-EfT"/>
+                            <constraint firstItem="pmz-qy-GQ7" firstAttribute="top" secondItem="XJ6-a4-rUY" secondAttribute="bottom" constant="100" id="rpn-k4-1dX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="k1Q-u4-no7" id="MhY-db-uf9"/>
+                        <outlet property="playButton" destination="gR9-qz-Pu2" id="m8r-Ji-K1G"/>
+                        <outlet property="titleLabel" destination="pmz-qy-GQ7" id="MpV-4C-Pay"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUd-eW-q7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-145" y="2106"/>
+        </scene>
+        <!--Stream demos-->
+        <scene sceneID="8eq-LX-h5M">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="uDg-je-vkQ" customClass="DemoListViewController" customModule="TVStreamingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="66" sectionFooterHeight="66" id="Wi7-Zr-AQG">
+                        <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DemoItemCell" id="n1R-OR-vnM">
+                                <rect key="frame" x="0.0" y="211" width="499" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n1R-OR-vnM" id="ZZh-H8-I1G">
+                                    <frame key="frameInset" width="618" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uDg-je-vkQ" id="vCT-Hn-W5v"/>
+                            <outlet property="delegate" destination="uDg-je-vkQ" id="HGH-i5-djW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Stream demos" id="4xP-nL-H0e"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozl-Xa-blP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802" y="-2692"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N3V-eC-dSt">
+            <objects>
+                <navigationController id="3fN-li-lKx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oF8-q4-y4U">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uDg-je-vkQ" kind="relationship" relationship="rootViewController" id="AYU-RG-BpT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ur-MM-duc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-785" y="-2693"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="p9a-an-6pF">
+            <objects>
+                <splitViewController id="WPU-4S-eTA" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="3fN-li-lKx" kind="relationship" relationship="masterViewController" id="oW7-h2-GeY"/>
+                        <segue destination="t4N-bc-rnM" kind="relationship" relationship="detailViewController" id="Yj9-iA-8wU"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zrv-cN-fCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3821" y="-498"/>
+        </scene>
+    </scenes>
+</document>

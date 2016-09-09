@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2095fc60-dd14-0410-b0cf-d9b56f9b0c0d++7968",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "2095fc60-dd14-0410-b0cf-d9b56f9b0c0d++7968" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2095fc60-dd14-0410-b0cf-d9b56f9b0c0d++7968" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EE85C7EC-B198-4FE8-A948-29A19AB2F2F9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2095fc60-dd14-0410-b0cf-d9b56f9b0c0d++7968" : "conferences-current\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TVStreamingDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "2016 CocoaConf Fall\/Apple TV streaming session\/code\/TVStreamingDemo\/TVStreamingDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/garnet.local",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2095fc60-dd14-0410-b0cf-d9b56f9b0c0d++7968"
+    }
+  ]
+}
